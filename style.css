@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Arcade";
+    src: url("Fonts/ARCADECLASSIC.TTF");
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+    font-family: "Arcade", sans-serif; 
+}
+
+
+.main{
+    background-color: green;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main img{
+    margin: 0 10px;
+}
+
+.main span{
+    font-size: 40px;
+    color: white;
+    word-spacing: 10px;
+}
+
+.main :nth-child(2){
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+#game-board{
+    background-color: rgb(39, 155, 39);
+    height: 600px;
+    width: 600px;
+    
+    
+}
+
+.nav{
+    background-color: rgb(59, 180, 59);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav span{
+    font-size: 30px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.board-grid{
+    background-color: rgb(39, 155, 39);
+    width: 600px;
+    height: 540px;
+    display: grid;
+    grid-template: repeat(15, 1fr)/repeat(15, 1fr);
+    
+
+}
+
+.board-grid span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board-grid .food{
+    background-image: url(Graphics/apple.png);
+    background-size:cover;
+    background-position: center;
+
+}
+
+.board-grid .snake{
+    
+    background-image: url(Graphics/body_horizontal.png);
+    background-position: center;
+    background-size: cover;
+}
