@@ -2,7 +2,7 @@
 const gameBoard = document.querySelector('.board-grid');
 const scoreBoard = document.querySelector('.score');
 const highScoreBoard = document.querySelector('.b-score');
-const text  = document.querySelector('.text');
+const controller = document.querySelectorAll('.controller i');
 
 let gameOver = false;
 let setIntervalID;
@@ -48,6 +48,10 @@ const  changeDirection=(e)=>{
     initGame();
  
 }
+
+controller.forEach(key => {
+    key.addEventListener("click", ()=> changeDirection({key : key.dataset.key})) ;
+});
 
 const handleGameOver = () => {
     clearInterval(setIntervalID);
