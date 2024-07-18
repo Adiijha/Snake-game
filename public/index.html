@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Graphics/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="title-board">
+            <span><img class="rimg" width="30px" height="30px" src="Graphics/logo.png" alt="">WELCOME TO SNAKE GAME!<img
+                    width="30px" height="30px" src="Graphics/logo.png" alt=""></span>
+            <span class="text">PRESS ARROW KEYS TO PLAY!!</span>
+        </div>
+        <div class="full-board">
+            <div id="game-board">
+                <div class="nav">
+                    <span class="score">SCORE : 0</span>
+                    <span class="b-score">HIGH SCORE : 0</span>
+                </div>
+                <div class="board-grid">
+                </div>
+
+                <div class="controller">
+                    <i data-key="ArrowUp" class="ri-arrow-up-line"></i>
+                    <i data-key="ArrowLeft" class=" ri-arrow-left-line"></i>
+                    <i data-key="ArrowRight" class="ri-arrow-right-line"></i>
+                    <i data-key="ArrowDown" class="ri-arrow-down-line"></i>
+                </div>
+            </div>
+            <div class="score-board">
+                <div id="leaderboard"></div>
+                <form id="score-form" style="display:none;">
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="credits">Made with ❤️ By <a href="https://github.com/adiijha">Adiijha</a></div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

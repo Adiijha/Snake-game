@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Arcade";
+    src: url("Graphics/Fonts/ARCADECLASSIC.TTF");
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+    font-family: "Arcade", sans-serif; 
+    overflow-x: hidden;
+}
+
+
+.main{
+    background-color: green;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+.main img{
+    margin: 0 10px;
+}
+
+.main span{
+    font-size: 40px;
+    color: white;
+    word-spacing: 10px;
+}
+
+.main .text{
+    font-size: 30px;
+    padding-bottom: 10px;
+    margin-left: 120px;
+}
+
+.title-board{
+    display: flex;
+    flex-direction: column;
+}
+
+.full-board{
+    display: flex;
+    flex-direction: row;
+    margin-left:150px;    
+}
+
+.score-board{
+    background-color: (39, 155, 39);
+    width:400px;
+    height: 600px;
+    margin-left: 100px;
+}
+
+#leaderboard{
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+    background-color: rgb(59, 180, 59);
+}
+
+.player-name{
+    font-size: 25px;
+    letter-spacing: 0;
+    word-spacing: 10px;
+    background-color: rgb(39, 155, 39);
+    padding: 5px 0;
+}
+.player-name::marker{
+   content : "";
+}
+
+
+input{
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    text-align: center;
+    border: none;
+    font-family: "Arcade", sans-serif;
+    word-spacing: 5px;
+}
+
+input ::placeholder{
+    font-size: 20px;
+    text-align: center;
+    font-family: "Arcade", sans-serif;
+    word-spacing: 5px;
+}
+
+
+button{
+    font-family: "Arcade", sans-serif;
+    word-spacing:5px;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    height: 40px;
+    width: 100px;
+    background-color: rgb(59, 180, 59);
+    color: white;
+}
+
+
+#game-board{
+    background-color: rgb(39, 155, 39);
+    height: 600px;
+    width: 600px;   
+}
+
+.title-board :nth-child(1){
+    font-size: 50px;
+    color: white;
+    word-spacing: 10px;
+}
+
+
+.nav{
+    background-color: rgb(59, 180, 59);
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav span{
+    font-size: 30px;
+    text-align: center;
+    padding: 0 25px;
+}
+
+.board-grid{
+    background-color: rgb(39, 155, 39);
+    width: 600px;
+    height: 550px;
+    display: grid;
+    grid-template: repeat(15, 1fr)/repeat(15, 1fr);
+}
+
+.board-grid span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board-grid .food{
+    background-image: url(Graphics/apple.png);
+    background-size:cover;
+    background-position: center;
+}
+
+.board-grid .snake{
+    background-image: url(Graphics/body_horizontal.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.controller{
+    display: none;
+}
+
+.credits{
+    position: relative;
+    left: 30%;
+    color: white;
+    word-spacing: 3px;
+}
+
+.credits a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+@media (max-width:760px) {
+
+    #game-board{
+        width:380px;
+        height:380px ;
+    }
+    .board-grid{
+        width: 380px;
+        height: 350px;
+    }
+    .nav{
+        width: 100%;
+        height: 55px;
+    }
+    .main span{
+        font-size: 27px;
+        color: white;
+        word-spacing: 8px;
+    }
+    
+    .main .text{
+        font-size: 22px;
+        margin-left:95px;
+    }
+
+    .nav span{
+        font-size: 20px;
+        text-align: center;
+        padding: 0 25px;
+    }
+
+    .controller {
+        display: grid;
+        grid-template-columns: repeat(3, 0fr);
+        grid-template-rows: repeat(3, 0fr);
+        height: 150px;
+        justify-content: center;
+        margin-top:8px;
+    }
+    
+    .controller i {
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        cursor: pointer;
+        background-color: rgb(59, 180, 59);
+        color: white;
+        border: 2px solid rgb(39, 155, 39);
+        width: 40px; 
+        height: 40px;    
+    }
+
+    .control-board{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 170px; 
+    }
+
+    .controller i:hover {
+        background-color: rgb(39, 155, 39); 
+    }
+    
+    .ri-arrow-up-line {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .ri-arrow-left-line{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .ri-arrow-down-line {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .ri-arrow-right-line {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    
+    .full-board{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .score-board{
+        width:200px;
+        height: 380px;
+        margin-left: 0;
+    }
+
+    .credits{
+        bottom: 1%;
+    }
+    .title-board :nth-child(1) {
+        font-size: 32px;
+        padding-top: 20px;
+    }
+
+    #leaderboard{
+        margin-top: 160px;
+        width: 380px;
+        
+    }
+    
+
+    .player-name{
+        font-size: 20px;
+        letter-spacing: 0;
+        word-spacing: 10px;
+        padding: 5px 0;
+    }
+    .title-board span .rimg{
+        padding: 0;
+    }
+
+    input{
+        font-size: 15px;
+        width: 150px;
+        height: 30px;
+    }
+
+    button{
+        font-size: 15px;
+        height: 30px;
+        width: 80px;
+    }
+
+    form{
+        width: 300px;
+    }
+
+
+}
