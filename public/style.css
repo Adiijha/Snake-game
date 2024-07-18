@@ -180,7 +180,7 @@ button {
 
 .credits a {
     color: white;
-    text-decoration: none;
+    
 }
 
 @media (max-width: 760px) {
@@ -198,7 +198,7 @@ button {
         height: 5.5vh;
     }
     .main span {
-        font-size: 4.5vw;
+        font-size: 5.5vw;
         color: white;
         word-spacing: 0.8vw;
     }
@@ -209,7 +209,7 @@ button {
     }
 
     .nav span {
-        font-size: 3.7vw;
+        font-size: 4vw;
         text-align: center;
         padding: 0 4.5vw;
     }
@@ -233,8 +233,8 @@ button {
         background-color: rgb(59, 180, 59);
         color: white;
         border: 0.2vw solid rgb(39, 155, 39);
-        width: 5.5vw; 
-        height: 5.5vw;    
+        width: 6.3vw; 
+        height: 6.3vw;    
     }
 
     .control-board {
@@ -273,7 +273,7 @@ button {
         display: flex;
         flex-direction: column;
         margin-left: 0;
-        width: 53vh;
+        width: 44vh;
         height: 90vh;
         
     }
@@ -285,7 +285,7 @@ button {
     
     .credits{
         bottom: 2vh;
-        left: 27vh;
+        left: 19vh;
         font-size: 1.6vh;
     }
     
@@ -311,18 +311,23 @@ button {
     }
     
     input{
-        font-size: 1.5vh;
-        width: 7.5vw;
-        height: 3vh;
+        font-size: 2vh;
+        width: 30vw;
+        height: 3.5vh;
+        margin: 1.2vh;
+    }
+    input::placeholder{
+        font-size: 2vh;
+    
     }
     
     button{
-        font-size: 1.5vh;
-        height: 3vh;
-        width: 4vw;
+        font-size: 2vh;
+        height: 3.5vh;
+        width: 17.5vw;
     }
     
     form{
-        width: 15vw;
+        width: 55vw;
     }
 }    
