@@ -68,8 +68,13 @@ document.addEventListener('keydown', (event) => {
 const handleGameOver = () => {
     clearInterval(setIntervalID);
     alert('Game Over. Press OK to restart');
-    scoreForm.style.display = 'block';
-    scoreForm.addEventListener('submit', submitScore);
+    if (score === 0) {
+        window.location.reload();
+    } else {
+        scoreForm.style.display = 'block';
+        scoreForm.addEventListener('submit', submitScore);
+       
+    }
 };
 
 

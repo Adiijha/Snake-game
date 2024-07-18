@@ -1,4 +1,7 @@
-*{
+/* style.css */
+
+/* Reset and Font */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,220 +13,214 @@
 }
 
 html, body {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     font-family: "Arcade", sans-serif; 
     overflow-x: hidden;
 }
 
-
-.main{
+.main {
     background-color: green;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column; 
 }
 
-.main img{
+.main img {
     margin: 0 10px;
 }
 
-.main span{
-    font-size: 40px;
+.main span {
+    font-size: 2.6vw;
     color: white;
-    word-spacing: 10px;
+    word-spacing: 0.3vw;
 }
 
-.main .text{
-    font-size: 30px;
-    padding-bottom: 10px;
-    margin-left: 120px;
+.main .text {
+    font-size: 1.9vw;
+    padding-bottom: 1.5vh;
+    word-spacing: 1.3vh;
+    /* margin-left: 12vw; */
 }
 
-.title-board{
+.title-board {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.full-board{
+.full-board {
     display: flex;
     flex-direction: row;
-    margin-left:150px;    
+    margin-left: 10vw;    
 }
 
-.score-board{
-    background-color: (39, 155, 39);
-    width:400px;
-    height: 600px;
-    margin-left: 100px;
+.score-board {
+    /* background-color: rgb(39, 155, 39); */
+    width: 26vw;
+    height: 75vh;
+    margin-left: 7vw;
 }
 
-#leaderboard{
+#leaderboard {
     color: white;
     letter-spacing: 1px;
     text-align: center;
     background-color: rgb(59, 180, 59);
 }
 
-.player-name{
-    font-size: 25px;
+.player-name {
+    font-size: 1.7vw;
     letter-spacing: 0;
-    word-spacing: 10px;
+    word-spacing: 0.5vw;
     background-color: rgb(39, 155, 39);
-    padding: 5px 0;
+    padding: 0.4vh 0;
 }
-.player-name::marker{
+.player-name::marker {
    content : "";
 }
 
-
-input{
-    font-size: 20px;
-    width: 200px;
-    height: 40px;
-    margin: 10px;
+input {
+    font-size: 1.3vw;
+    width: 13vw;
+    height: 5.5vh;
+    margin: 1.3vh;
     text-align: center;
     border: none;
     font-family: "Arcade", sans-serif;
-    word-spacing: 5px;
+    word-spacing: 0.5vw;
 }
 
-input ::placeholder{
-    font-size: 20px;
+input::placeholder {
+    font-size: 1.3vw;
     text-align: center;
     font-family: "Arcade", sans-serif;
-    word-spacing: 5px;
+    word-spacing: 0.3vw;
 }
 
-
-button{
+button {
     font-family: "Arcade", sans-serif;
-    word-spacing:5px;
+    word-spacing: 0.3vw;
     text-align: center;
     border: none;
-    font-size: 20px;
-    height: 40px;
-    width: 100px;
+    font-size: 1.3vw;
+    height: 5.5vh;
+    width: 6.3vw;
     background-color: rgb(59, 180, 59);
     color: white;
 }
 
-
-#game-board{
+#game-board {
     background-color: rgb(39, 155, 39);
-    height: 600px;
-    width: 600px;   
+    height: 83vh;
+    width: 83vh;   
 }
 
-.title-board :nth-child(1){
-    font-size: 50px;
+.title-board :nth-child(1) {
+    font-size: 3.3vw;
     color: white;
-    word-spacing: 10px;
+    word-spacing: 0.6vw;
 }
 
-
-.nav{
+.nav {
     background-color: rgb(59, 180, 59);
     width: 100%;
-    height: 55px;
+    height: 7.5vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.nav span{
-    font-size: 30px;
+.nav span {
+    font-size: 2vw;
     text-align: center;
-    padding: 0 25px;
+    padding: 0 1.5vw;
+    word-spacing: 1.3vh;
 }
 
-.board-grid{
+.board-grid {
     background-color: rgb(39, 155, 39);
-    width: 600px;
-    height: 550px;
+    width: 83vh;
+    height: 76vh;
     display: grid;
-    grid-template: repeat(15, 1fr)/repeat(15, 1fr);
+    grid-template: repeat(15, 1fr) / repeat(15, 1fr);
 }
 
-.board-grid span{
+.board-grid span {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.board-grid .food{
+.board-grid .food {
     background-image: url(Graphics/apple.png);
-    background-size:cover;
+    background-size: cover;
     background-position: center;
 }
 
-.board-grid .snake{
+.board-grid .snake {
     background-image: url(Graphics/body_horizontal.png);
     background-position: center;
     background-size: cover;
 }
 
-.controller{
+.controller {
     display: none;
 }
 
-.credits{
+.credits {
     position: relative;
-    left: 30%;
+    left: 38%;
     color: white;
-    word-spacing: 3px;
+    word-spacing: 0.3vw;
 }
 
-.credits a{
+.credits a {
     color: white;
     text-decoration: none;
 }
 
+@media (max-width: 760px) {
 
-
-
-
-@media (max-width:760px) {
-
-    #game-board{
-        width:380px;
-        height:380px ;
+    #game-board {
+        width: 70vw;
+        height: 70vw;
     }
-    .board-grid{
-        width: 380px;
-        height: 350px;
+    .board-grid {
+        width: 70vw;
+        height: 62vw;
     }
-    .nav{
+    .nav {
         width: 100%;
-        height: 55px;
+        height: 5.5vh;
     }
-    .main span{
-        font-size: 27px;
+    .main span {
+        font-size: 4.5vw;
         color: white;
-        word-spacing: 8px;
+        word-spacing: 0.8vw;
     }
     
-    .main .text{
-        font-size: 22px;
-        margin-left:95px;
+    .main .text {
+        font-size: 3.7vw;
+        margin-left: 0.5vw;
     }
 
-    .nav span{
-        font-size: 20px;
+    .nav span {
+        font-size: 3.7vw;
         text-align: center;
-        padding: 0 25px;
+        padding: 0 4.5vw;
     }
 
     .controller {
         display: grid;
         grid-template-columns: repeat(3, 0fr);
         grid-template-rows: repeat(3, 0fr);
-        height: 150px;
+        height: 15vw;
         justify-content: center;
-        margin-top:8px;
+        margin-top: 0.8vw;
     }
     
     .controller i {
@@ -231,24 +228,24 @@ button{
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 30px;
+        font-size: 3vw;
         cursor: pointer;
         background-color: rgb(59, 180, 59);
         color: white;
-        border: 2px solid rgb(39, 155, 39);
-        width: 40px; 
-        height: 40px;    
+        border: 0.2vw solid rgb(39, 155, 39);
+        width: 5.5vw; 
+        height: 5.5vw;    
     }
 
-    .control-board{
-        display:flex;
+    .control-board {
+        display: flex;
         justify-content: center;
         align-items: center;
-        height: 170px; 
+        height: 17vw; 
     }
 
     .controller i:hover {
-        background-color: rgb(39, 155, 39); 
+        background-color: rgb(39, 155, 39);
     }
     
     .ri-arrow-up-line {
@@ -276,54 +273,56 @@ button{
         display: flex;
         flex-direction: column;
         margin-left: 0;
+        width: 53vh;
+        height: 90vh;
+        
     }
 
     .score-board{
-        width:200px;
-        height: 380px;
+        
         margin-left: 0;
     }
-
+    
     .credits{
-        bottom: 1%;
-    }
-    .title-board :nth-child(1) {
-        font-size: 32px;
-        padding-top: 20px;
-    }
-
-    #leaderboard{
-        margin-top: 160px;
-        width: 380px;
-        
+        bottom: 2vh;
+        left: 27vh;
+        font-size: 1.6vh;
     }
     
-
-    .player-name{
-        font-size: 20px;
-        letter-spacing: 0;
-        word-spacing: 10px;
-        padding: 5px 0;
+    .title-board :nth-child(1) {
+        font-size: 4.2vh;
+        padding-top: 2vh;
     }
+    
+    #leaderboard{
+        margin-top: 13vh;
+        width: 70vw;
+    }
+    
+    .player-name{
+        font-size: 2.8vh;
+        letter-spacing: 0;
+        word-spacing: 1vw;
+        padding: 0.5vh 0;
+    }
+    
     .title-board span .rimg{
         padding: 0;
     }
-
+    
     input{
-        font-size: 15px;
-        width: 150px;
-        height: 30px;
+        font-size: 1.5vh;
+        width: 7.5vw;
+        height: 3vh;
     }
-
+    
     button{
-        font-size: 15px;
-        height: 30px;
-        width: 80px;
+        font-size: 1.5vh;
+        height: 3vh;
+        width: 4vw;
     }
-
+    
     form{
-        width: 300px;
+        width: 15vw;
     }
-
-
-}
+}    
