@@ -183,15 +183,15 @@ button {
     
 }
 
-@media (max-width: 760px) {
+@media (max-width: 500px) {
 
     #game-board {
-        width: 70vw;
-        height: 70vw;
+        width: 78vw;
+        height: 78vw;
     }
     .board-grid {
-        width: 70vw;
-        height: 62vw;
+        width: 78vw;
+        height: 72vw;
     }
     .nav {
         width: 100%;
@@ -220,7 +220,7 @@ button {
         grid-template-rows: repeat(3, 0fr);
         height: 15vw;
         justify-content: center;
-        margin-top: 0.8vw;
+        margin-top: 1.8vw;
     }
     
     .controller i {
@@ -233,8 +233,8 @@ button {
         background-color: rgb(59, 180, 59);
         color: white;
         border: 0.2vw solid rgb(39, 155, 39);
-        width: 6.3vw; 
-        height: 6.3vw;    
+        width: 8.5vw; 
+        height: 8.5vw;    
     }
 
     .control-board {
@@ -273,8 +273,8 @@ button {
         display: flex;
         flex-direction: column;
         margin-left: 0;
-        width: 44vh;
-        height: 90vh;
+        width: 39vh;
+        height: 85vh;
         
     }
 
@@ -284,19 +284,19 @@ button {
     }
     
     .credits{
-        bottom: 2vh;
-        left: 19vh;
+        bottom: 0vh;
+        left: 14vh;
         font-size: 1.6vh;
     }
     
     .title-board :nth-child(1) {
-        font-size: 4.2vh;
+        font-size: 3.3vh;
         padding-top: 2vh;
     }
     
     #leaderboard{
-        margin-top: 13vh;
-        width: 70vw;
+        margin-top: 17vh;
+        width: 78vw;
     }
     
     .player-name{
@@ -312,7 +312,7 @@ button {
     
     input{
         font-size: 2vh;
-        width: 30vw;
+        width: 38vw;
         height: 3.5vh;
         margin: 1.2vh;
     }
@@ -328,6 +328,6 @@ button {
     }
     
     form{
-        width: 55vw;
+        width: 65vw;
     }
 }    
